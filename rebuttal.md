@@ -94,7 +94,7 @@ We appreciate the reviewers' time and welcome further discussion.
 <!-- 异构架构的适用性：当教师和学生模型具有不同架构（例如CNN教师和变压器学生）时，SHD的表现如何？
 与OFAKD整合：是否考虑过整合OFAKD中的特征投影技术以增强SHD在跨架构蒸馏场景中的表现？
 可扩展性：SHD在极小的学生模型（例如10倍小的学生模型）中的表现如何？ -->
-Thank you for your insightful comments regarding the applicability of our method to heterogeneous architectures. We would like to clarify our approach and the scope of our work.
+Thank you for your insightful comments regarding the applicability of our method to heterogeneous architectures. We would like to clarify our approach and the scope of our work.  
 **Q:** Applicability to Heterogeneous Architectures: How does SHD perform when the teacher and student models have different architectures, such as a CNN teacher and a Transformer student?​ Have you considered integrating feature projection techniques from OFAKD to enhance SHD's performance in cross-architecture distillation scenarios?​  
 **A:** Our primary focus is on distillation between transformer models. Heterogeneous architectures, such as CNNs, do not inherently contain attention maps. While it is theoretically possible to create multiple attention maps from intermediate layer features for alignment purposes, this would diverge from our goal of providing an almost cost-free method that does not add parameters or increase training time. Given that transformers have become the mainstream models in many applications, we believe that our method already addresses a significant portion of the current landscape by focusing on homogeneous transformer architectures.
 Additionally, we chose not to integrate feature projection techniques from OFAKD for the same reason. Our aim was to maintain an almost cost-free method, and incorporating these techniques would have compromised that objective.
@@ -105,7 +105,7 @@ Additionally, we chose not to integrate feature projection techniques from OFAKD
 We appreciate the reviewers' time and welcome further discussion.
 
 ## Reviewer UH7y
-Thank you for your insightful comments and for highlighting areas in our manuscript that required further clarification. 
+Thank you for your insightful comments and for highlighting areas in our manuscript that required further clarification.  
 **Q:** Can SHD compress any number of heads?  
 **A:** Yes. The closed-form solution (Eq.9) allows **arbitrary compression ratios** via iterative merging. For example, to compress 9→3 heads:
 - **Phase 1 (9→5)**: 
