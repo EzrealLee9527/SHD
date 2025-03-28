@@ -63,7 +63,7 @@ def SHD_progressive_merge(teacher_heads, N):
 - GPT2-XL 25→12/16/20 heads (Table 3)
 - LLaMA 40→32 heads (Table 3)
 
-**Q:** Could you provide some more details about compression ratios? For instance, in table 1 when you distill to a student model with 33M parameters, is this always a modification of the teacher architecture with one attention head per layer? 
+**Q:** Could you provide some more details about compression ratios? For instance, in table 1 when you distill to a student model with 33M parameters, is this always a modification of the teacher architecture with one attention head per layer?  
 **A:** We clarify that SHD does not require compressing to one head per layer. We keep the original MDTv2 series architectures，MDTv2/2-XL(the 675M-parameter teacher) has 16 heads, MDTv2/2-B(the 130M-parameter teacher) has 12 heads, MDTv2/2-S(the 33M-parameter student) has 6 heads. SHD supports arbitrary head counts through progressive merging, the 33M-parameter student in Table 1 is distilled using 16→6 heads merging for MDTv2/2-XL(the 675M-parameter teacher) and using 12→6 heads merging for MDTv2/2-B(the 130M-parameter teacher).
 
 **Q:** How is SHD combined with KD/MiniLLM/BabyLlama?  
