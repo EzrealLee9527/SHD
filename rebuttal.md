@@ -81,7 +81,7 @@ SHD是如何与KD、BabyLlama和MiniLLM结合的？在这些情况下的损失�
 
 
 **Q:** Empirical Robustness  
-**A:** We will add 95% CIs (3 seeds) to Tables 2/4/6.
+**A:** We promise to add experiments with 3 seeds for robustness.
 
 We appreciate the reviewers' time and welcome further discussion.
 
