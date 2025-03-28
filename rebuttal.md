@@ -76,11 +76,11 @@ SHD是如何与KD、BabyLlama和MiniLLM结合的？在这些情况下的损失�
 
 
 
-**Q:** Clarity of writing
-**A:** We appreciate your detail and constructive criticism and are committed to improving the manuscript. Thank you for your thorough review and suggestions. We have moved Figure 2 from the appendix to the main text to help readers better understand our method.
+**Q:** Clarity of writing  
+**A:** We appreciate your detail and constructive criticism and are committed to improving the manuscript. We fixed the typos, sentences with awkward phrasing and incomplete sentences. And We moved Figure 2 from the appendix to the main text to help readers better understand our method.
 
 
-**Q:** Empirical Robustness
+**Q:** Empirical Robustness  
 **A:** We will add 95% CIs (3 seeds) to Tables 2/4/6.
 
 We appreciate the reviewers' time and welcome further discussion.
