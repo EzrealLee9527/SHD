@@ -95,11 +95,11 @@ We appreciate the reviewers' time and welcome further discussion.
 与OFAKD整合：是否考虑过整合OFAKD中的特征投影技术以增强SHD在跨架构蒸馏场景中的表现？
 可扩展性：SHD在极小的学生模型（例如10倍小的学生模型）中的表现如何？ -->
 Thank you for your insightful comments regarding the applicability of our method to heterogeneous architectures. We would like to clarify our approach and the scope of our work.
-**Q:** Applicability to Heterogeneous Architectures: How does SHD perform when the teacher and student models have different architectures, such as a CNN teacher and a Transformer student?​ Have you considered integrating feature projection techniques from OFAKD to enhance SHD's performance in cross-architecture distillation scenarios?​
+**Q:** Applicability to Heterogeneous Architectures: How does SHD perform when the teacher and student models have different architectures, such as a CNN teacher and a Transformer student?​ Have you considered integrating feature projection techniques from OFAKD to enhance SHD's performance in cross-architecture distillation scenarios?​  
 **A:** Our primary focus is on distillation between transformer models. Heterogeneous architectures, such as CNNs, do not inherently contain attention maps. While it is theoretically possible to create multiple attention maps from intermediate layer features for alignment purposes, this would diverge from our goal of providing an almost cost-free method that does not add parameters or increase training time. Given that transformers have become the mainstream models in many applications, we believe that our method already addresses a significant portion of the current landscape by focusing on homogeneous transformer architectures.
 Additionally, we chose not to integrate feature projection techniques from OFAKD for the same reason. Our aim was to maintain an almost cost-free method, and incorporating these techniques would have compromised that objective.
 
-**Q:** Scalability: How does SHD perform in extremely small student models (e.g., a 10x smaller student)?​
+**Q:** Scalability: How does SHD perform in extremely small student models (e.g., a 10x smaller student)?​  
 **A:** We have experiments using 10x smaller student models in the table 1 (675M teacher and 33M student) and table 3 (1.5B teacher and 120M student). The results show that SHD can still effectively compress attention heads and maintain good performance in such cases.
 
 We appreciate the reviewers' time and welcome further discussion.
@@ -154,7 +154,7 @@ The student can have **any head count ≤ teacher's** (Sec 5). Experiments inclu
 - GPT2-XL 25→12/16/20 heads (Table 3)
 - LLaMA 40→32 heads (Table 3)
 
-**Q:** Regarding missing definitions.
+**Q:** Regarding missing definitions.  
 **A:** We have added definitions in Equation 12 and corrected the wording error in line 145 in the revised version.
 
 We appreciate the reviewers' time and welcome further discussion.
